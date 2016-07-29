@@ -1,74 +1,69 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <script>
-        $('.carousel').carousel({
-  interval: 6000,
-  pause: "false"
-});
-var $item = $('.carousel .item');
-var $wHeight = $(window).height();
+<html lang="en">
+<head>
+  <title>WONDER WOMYN</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: 0px;
+  }
+      body{
+          background-image: url(https://resnicklab.files.wordpress.com/2012/05/total_sombrero_no_background.jpg);
+      }
+  </style>
+</head>
+<body>
 
-$item.height($wHeight); 
-$item.addClass('full-screen');
+<div class="container">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
 
-$('.carousel img').each(function() {
-  var $src = $(this).attr('src');
-  var $color = $(this).attr('data-color');
-  $(this).parent().css({
-    'background-image' : 'url(' + $src + ')',
-    'background-color' : $color
-  });
-  $(this).remove();
-});
-
-$(window).on('resize', function (){
-  $wHeight = $(window).height();
-  $item.height($wHeight);
-});
-    </script>
-        <link rel="stylesheet" type = "text/css" href="carousel.css">
-     </head>   
-    <body>
-     
-<div id="mycarousel" class="carousel slide" data-ride="carousel">
-<!--
-   Indicators 
-  <ol class="carousel-indicators">
-    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#mycarousel" data-slide-to="1"></li>
-    <li data-target="#mycarousel" data-slide-to="2"></li>
-    <li data-target="#mycarousel" data-slide-to="3"></li>
-    <li data-target="#mycarousel" data-slide-to="4"></li>
-  </ol>
--->
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src= "story1.jpg";>
-      <div class="In Rwanda, girls are often seen to have only two roles during their lives: daughter and then wife. Ni Nyampinga showcases a different reality: that girls are Rwanda's greatest untapped source of economic and social growth. One way of doing this is to expose girls to positive role models who have broken through the invisible barriers holding them back. These Ni Nyampinga heroes are not only changing the way Rwanda views girls, but the way girls view themselves.">
-        <h3>THE NI NYAMPINGA ROLE MODELS INSPIRING GIRLS IN RWANDA</h3>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="carousel1.png" width="800" height="900">
       </div>
-    </div>
+
+      <div class="item">
+        <img src="carousel2.png" width="460" height="345">
+      </div>
+    
+      <div class="item">
+        <img src="carousel3.png" width="460" height="345">
+      </div>
+
+      <div class="item">
+        <img src="carousel4.png"width="460" height="345">
+      </div>
     <div class="item">
-      <img src="story2.jpg">
-      <div class="carousel-caption">
-        <h3>Second Image</h3>
+        <img src="carousel5.png"width="460" height="345">
       </div>
     </div>
-    <!-- more slides here -->
-  </div>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </div>
+
 </body>
 </html>
